@@ -63,7 +63,6 @@ Update an existing employee information by passing in the information as a JSON 
 
 `````
 {
-     "id": 200,
      "firstName": "Michael",
      "middleInitial": "A",
      "lastName": "Jackson",
@@ -97,7 +96,7 @@ Create a new employee by passing in the information as a JSON in the body of the
     
 | Request Type | URI | Body |
 |--------------|-----|------|
-| POST|http://localhost:8080/employee/{id}|Employee JSON 
+| POST|http://localhost:8080/employee|Employee JSON 
 
 ---
 #### Delete Employee ####
