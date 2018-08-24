@@ -57,26 +57,6 @@ Get details on a particular employee by their ID
 | GET|http://localhost:8080/employee/{id}|
 
 ---
-#### Update Employee ####
-
-Update an existing employee information by passing in the information as a JSON in the body of the API call:
-
-`````
-{
-     "firstName": "Michael",
-     "middleInitial": "A",
-     "lastName": "Jackson",
-     "dateOfBirth": "1990-12-01",
-     "dateOfEmployment": "2005-01-01"
- }
- ````` 
- 
-    
-| Request Type | URI | Body |
-|--------------|-----|------|
-| PUT|http://localhost:8080/employee/{id}|Employee JSON 
-
----
 #### Create New Employee ####
 
 Create a new employee by passing in the information as a JSON in the body of the API call:
@@ -97,6 +77,26 @@ Create a new employee by passing in the information as a JSON in the body of the
 | Request Type | URI | Body |
 |--------------|-----|------|
 | POST|http://localhost:8080/employee|Employee JSON 
+
+---
+#### Update Employee ####
+
+Update an existing employee information by passing in the information as a JSON in the body of the API call:
+
+`````
+{
+     "firstName": "Michael",
+     "middleInitial": "A",
+     "lastName": "Jackson",
+     "dateOfBirth": "1990-12-01",
+     "dateOfEmployment": "2005-01-01"
+ }
+ ````` 
+ 
+    
+| Request Type | URI | Body |
+|--------------|-----|------|
+| PUT|http://localhost:8080/employee/{id}|Employee JSON 
 
 ---
 #### Delete Employee ####
