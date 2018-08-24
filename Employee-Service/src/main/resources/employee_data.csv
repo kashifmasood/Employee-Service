@@ -1,0 +1,9 @@
+id, first_name, middle_initial, last_name, date_of_birth, date_of_employment
+101, John, M, Spenser, 2000-12-1, 2018-1-1
+102, Pat, F, Calahan, 2003-6-1, 2017-5-1
+103, Kerry, X, Smith, 2005-3-1, 2017-5-1
+104, Renna, S, Wretling, 2001-6-1, 2017-5-1
+105, Victor, H, Shaffer, 1996-2-1, 2017-5-1
+106, Bob, N, Hope, 2003-6-1, 1983-5-1
+107, Paul, J, Daniel, 2003-6-1, 1940-6-1
+108, Jason, O, Wright, 2003-6-1, 1999-5-1
