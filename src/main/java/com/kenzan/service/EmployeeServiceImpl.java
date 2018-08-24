@@ -23,6 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
       return emp.get();
     }
 
+    // TODO: throw clean exceptions here rather than null
     return null;
   }
 
@@ -32,13 +33,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 
   public Long createEmployee(Employee emp) {
     // TODO: validate employee object
-    emp.setStatus(Status.ACTIVE); // Set status to ACTIVE for all employees by default
-    Employee newEmp = employeeRepository.save(emp);
 
-    if (newEmp != null) {
-      return newEmp.getId();
+    // Test for duplicate
+    Optional<Employee> currEmp = employeeRepository.findById(emp.getId());
+
+    if (!currEmp.isPresent()) {
+      emp.setStatus(Status.ACTIVE); // Set status to ACTIVE for all employees by default
+      Employee newEmp = employeeRepository.save(emp);
+
+      if (newEmp != null) {
+        return newEmp.getId();
+      }
     }
 
+    // TODO: throw clean exceptions here rather than null
     return null;
   }
 
@@ -57,6 +65,7 @@ public class EmployeeServiceImpl implements EmployeeService {
       employeeRepository.save(employee);
     });
 
+    // TODO: throw clean exceptions here rather than null
     return (emp.isPresent() ? id : null);
   }
 
@@ -69,6 +78,7 @@ public class EmployeeServiceImpl implements EmployeeService {
       employeeRepository.save(employee);
     });
 
+    // TODO: throw clean exceptions here rather than null
     return (emp.isPresent() ? id : null);
   }
 }

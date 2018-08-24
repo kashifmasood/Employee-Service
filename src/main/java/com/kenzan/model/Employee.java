@@ -92,7 +92,7 @@ public class Employee {
   }
 
   public String toString() {
-    return firstName;
+    return id + ", " + firstName + ", " + lastName;
   }
 }
 

@@ -37,7 +37,6 @@ public class EmployeeControllerImpl implements EmployeeController {
   @RequestMapping(method = RequestMethod.POST)
   @ResponseBody
   public ResponseEntity<?> createEmployee(@RequestBody Employee emp) {
-    // TODO: Preconditions.checkNotNull(resource);
     Long newEmpId = employeeService.createEmployee(emp);
 
     if (newEmpId != null) {
@@ -49,7 +48,6 @@ public class EmployeeControllerImpl implements EmployeeController {
 
   @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
   public ResponseEntity<?> update(@PathVariable( "id" ) Long id, @RequestBody Employee emp) {
-    // TODO: Preconditions.checkNotNull(resource);
     Long updatedEmpId = employeeService.updateEmployee(id, emp);
 
     if (updatedEmpId != null) {
