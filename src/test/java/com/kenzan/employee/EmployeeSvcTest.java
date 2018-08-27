@@ -113,9 +113,18 @@ public class EmployeeSvcTest {
 
   @Test
   public void testDeleteEmployee() {
-    employeeService.deleteEmployee(new Long(101));
+    Long empId = new Long (101);
+    employeeService.deleteEmployee(empId);
 
-    Optional<Employee> emp = employeeRepository.findById(new Long(101));
+    Optional<Employee> emp = employeeRepository.findById(empId);
     assert(!emp.isPresent());
+  }
+
+  @Test
+  public void testDeleteEmployeeFail() {
+    Long empId = new Long (1090);
+    Long deletedEmpId = employeeService.deleteEmployee(empId);
+
+    assert(deletedEmpId == null);
   }
 }
